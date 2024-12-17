@@ -11,7 +11,7 @@
 cd js
 npm ci
 
-# настройка Python части 
+# Настройка Python части 
 Вы находитесь в папке project\back
 
 Если в папке project\back\js 
