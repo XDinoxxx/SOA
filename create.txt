@@ -19,16 +19,3 @@ CREATE TABLE IF NOT EXISTS "hotel" (
 	"rating" double precision NOT NULL,
 	PRIMARY KEY ("id")
 );
-
-CREATE TABLE IF NOT EXISTS "booking" (
-	"id" serial NOT NULL UNIQUE,
-	"hotel_id" bigint NOT NULL,
-	"customer_name" varchar(255) NOT NULL,
-	"check_in_date" timestamp without time zone NOT NULL,
-	"check_out_date" timestamp without time zone NOT NULL,
-	PRIMARY KEY ("id")
-);
-
-
-
-ALTER TABLE "booking" ADD CONSTRAINT "booking_fk1" FOREIGN KEY ("hotel_id") REFERENCES "hotel"("id");
